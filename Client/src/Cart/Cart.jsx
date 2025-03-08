@@ -27,7 +27,7 @@ export default function Cart() {
     }
     async function removeFromCart(productId){
         try{
-            await axios.delete(`http://localhost:5000/api/cart/remove/${productId}`,{
+            await axios.delete(`https://e-commerce-ve24.onrender.com/api/cart/remove/${productId}`,{
                 headers:{Authorization:`Bearer ${user.token}`}
             })
             .then((res)=>{
